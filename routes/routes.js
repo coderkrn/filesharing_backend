@@ -15,7 +15,7 @@ router.post('/upload', upload.single('file') , async (req, res)=>{
     }
     try {
         const file = await File.create(fileObj)
-        console.log(file)
+        // console.log(file)
         res.status(200).json({path: `https://filesharing-g1wq.onrender.com/file/${file._id}`})
     } catch (error) {
         console.log(error.message)
