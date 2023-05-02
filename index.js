@@ -14,6 +14,10 @@ app.use(cors())
 
 app.use('/', router)
 
+app.get('/', (req, res)=>{
+    res.send("<h1>Hello World</h1>")
+})
+
 DBConnection();
 app.listen(PORT, ()=>{
     console.log(`Server is runnig on PORT ${PORT}`)
